@@ -35,6 +35,111 @@
 			"response": []
 		},
 		{
+			"name": "Retrieve Account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "123.456.789-10",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "123.456.789-10",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rafael PM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "123.456.789-10",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Make Deposit",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {}
@@ -131,6 +236,40 @@
 					"port": "3333",
 					"path": [
 						"statement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statement By Date",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "123.456.789-10",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/statement?date=2022-09-02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"statement"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-09-02"
+						}
 					]
 				}
 			},
