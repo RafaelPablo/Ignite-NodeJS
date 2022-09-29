@@ -3,7 +3,8 @@
 import { Router } from "express";
 
 import { createSpecificationController } from "../modules/cars/useCases/createSpecification";
-import { listCategoriesController } from "../modules/cars/useCases/listCategories";
+import { listSpecificationsController } from "../modules/cars/useCases/listSpecifications";
+
 
 const specificationsRoutes = Router ();
 
@@ -14,7 +15,7 @@ specificationsRoutes.post("/", ( request, response ) => {
 
 specificationsRoutes.get("/", ( request, response ) => {
 
-    return listCategoriesController.handle( request, response );
+    return listSpecificationsController.handle( request, response );
 });
 
 export { specificationsRoutes };
